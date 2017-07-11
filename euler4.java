@@ -18,10 +18,15 @@ public class euler4 {
         char[] array = str.toCharArray(); //Convert String to char[]
         for(int i = 0; i < array.length / 2; i++){
             if(i == 0){
-                if(array[0] != array[array.length-1]) {return false;} //Is the first index equal to the last index?
+                //Is the first index equal to the last index?
+                if(array[0] != array[array.length-1]) {
+                    return false;
+                } 
             }
             //Compares second index with second to last index etc..
-            if(array[i] != array[array.length-i - 1]) {return false;}
+            if(array[i] != array[array.length - i - 1]) {
+                return false;
+            }
         }
         return true;
     }
