@@ -6,7 +6,7 @@ public class euler4 {
                 int num = i * j;
                 if(isPalindrome(i,j)){
                     if(num > max){
-                        max = num; //If the product is a palindrome and is greater than the current max, current num is set to the new max.
+                        max = num;
                     }
                 }
             }
@@ -15,20 +15,13 @@ public class euler4 {
     }
     static boolean isPalindrome(int x, int y){
         String temp = Integer.toString(x * y);
-        char[] array = new char[temp.length()];
-        for(int i = 0; i < temp.length(); i++){
-            array[i] = temp.charAt(i);
-        }
+        char[] array = temp.toCharArray(); //Convert String to char[]
         for(int i = 0; i < array.length / 2; i++){
             if(i == 0){
-                if(array[0] == array[array.length-1]){ //Is the first index equal to the last index?
-                    continue;
-                } else{
-                    return false;}
+                if(array[0] != array[array.length-1]) {return false;} //Is the first index equal to the last index?
             }
             //Compares second index with second to last index etc..
-            if(array[i] == array[array.length-i - 1]) {}
-            else{return false;}
+            if(array[i] != array[array.length-i - 1]) {return false;}
         }
         return true;
     }
