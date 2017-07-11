@@ -14,8 +14,8 @@ public class euler4 {
         System.out.println(max);
     }
     static boolean isPalindrome(int x, int y){
-        String temp = Integer.toString(x * y);
-        char[] array = temp.toCharArray(); //Convert String to char[]
+        String str = Integer.toString(x * y);
+        char[] array = str.toCharArray(); //Convert String to char[]
         for(int i = 0; i < array.length / 2; i++){
             if(i == 0){
                 if(array[0] != array[array.length-1]) {return false;} //Is the first index equal to the last index?
