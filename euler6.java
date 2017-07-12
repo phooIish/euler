@@ -1,6 +1,6 @@
 public class euler6 {
     public static void main(String[] args) {
-        int sq_sum = squareOfsum(100) * squareOfsum(100);
+        int sq_sum = (int)Math.pow(squareOfsum(100),2);
         int ans = sq_sum - sumOfsquares(100);
         System.out.println(ans);
     }
