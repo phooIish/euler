@@ -17,12 +17,6 @@ public class euler4 {
     static boolean isPalindrome(int x, int y){
         String num = Integer.toString(x * y);
         for(int i = 0; i < num.length() / 2; i++){ //You only need to check if the first half mirrors the second half.
-            if(i == 0){
-                if(num.charAt(0) == num.charAt(num.length()-1)){ //Is the first index equal to the last index?
-                    continue;
-                } else{
-                    return false;}
-            }
             //Compares second index with second to last index etc..
             if(num.charAt(i) != num.charAt(num.length()-1 - i)) {
                 return false;
