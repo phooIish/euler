@@ -13,18 +13,18 @@ public class euler4 {
         }
         System.out.println(max);
     }
+
     static boolean isPalindrome(int x, int y){
-        String str = Integer.toString(x * y);
-        char[] array = str.toCharArray(); //Convert String to char[]
-        for(int i = 0; i < array.length / 2; i++){
+        String num = Integer.toString(x * y);
+        for(int i = 0; i < num.length() / 2; i++){ //You only need to check if the first half mirrors the second half.
             if(i == 0){
-                //Is the first index equal to the last index?
-                if(array[0] != array[array.length-1]) {
-                    return false;
-                } 
+                if(num.charAt(0) == num.charAt(num.length()-1)){ //Is the first index equal to the last index?
+                    continue;
+                } else{
+                    return false;}
             }
             //Compares second index with second to last index etc..
-            if(array[i] != array[array.length - i - 1]) {
+            if(num.charAt(i) != num.charAt(num.length()-1 - i)) {
                 return false;
             }
         }
